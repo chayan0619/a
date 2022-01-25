@@ -1,7 +1,9 @@
 <?php
 
 session_start();
-include_once('includes/config.php');
+
+require_once('includes/config.php');
+
 if(isset($_POST['sb']))
 {
   $name=$_POST['name'];
