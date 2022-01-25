@@ -6,6 +6,7 @@ mysqli_real_connect($conn, 'webapp1-server1.mysql.database.azure.com', 'server1'
 if (mysqli_connect_errno($conn)) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-
+else
+  echo "connect";
 
 ?>
