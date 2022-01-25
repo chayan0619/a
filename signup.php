@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-
+require_once('includes/config.php');
 
 //Code for Registration 
 if(isset($_POST['submit']))
