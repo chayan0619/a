@@ -34,7 +34,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">Not Registers Yet</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="try.php">Signup Here</a>
+                                        <a class="small text-white stretched-link" href="signup.php">Signup Here</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
