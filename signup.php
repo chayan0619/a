@@ -1,4 +1,6 @@
-<?php session_start();
+<?php 
+
+session_start();
 require_once('includes/config.php');
 
 //Code for Registration 
@@ -24,7 +26,11 @@ if($msg)
 }
 }
 }
-?><!DOCTYPE html>
+
+?>
+
+
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
