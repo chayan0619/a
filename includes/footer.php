@@ -4,7 +4,7 @@
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; <?php echo date('Y');?></div>
                             <div>
-                                <a href="https://phpgurukul.com/" target="_blank">PHPGurukul | Programming Blog</a>
+                                <a href="https://phpgurukul.com/" target="_blank"></a>
     
                             </div>
                         </div>
