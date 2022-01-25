@@ -5,7 +5,7 @@ if(isset($_POST['sb']))
 {
   $name=$_POST['name'];
    
-  $run = mysqli_query($conn,"insert into user (name) values('$name')");
+  $run = mysqli_query($conn,"insert into user (name) values($name)");
   if($run)
   {
     echo" inserted value";
