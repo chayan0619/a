@@ -21,7 +21,7 @@ if(isset($_POST['update']))
     $lname=$_POST['lname'];
     $contact=$_POST['contact'];
 $userid=$_SESSION['id'];
-    $msg=mysqli_query($con,"update users set fname='$fname',lname='$lname',contactno='$contact' where id='$userid'");
+    $msg=mysqli_query($conn,"update users set fname='$fname',lname='$lname',contactno='$contact' where id='$userid'");
 
 if($msg)
 {
@@ -56,7 +56,7 @@ if($msg)
                         
 <?php 
 $userid=$_SESSION['id'];
-$query=mysqli_query($con,"select * from users where id='$userid'");
+$query=mysqli_query($conn,"select * from users where id='$userid'");
 while($result=mysqli_fetch_array($query))
 {?>
                         <h1 class="mt-4"><?php echo $result['fname'];?>'s Profile</h1>
