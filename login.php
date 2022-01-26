@@ -1,4 +1,6 @@
-<?php session_start(); 
+<?php 
+
+session_start(); 
 include_once('includes/config.php');
 // Code for login 
 if(isset($_POST['login']))
@@ -6,7 +8,7 @@ if(isset($_POST['login']))
 $password=$_POST['password'];
 $dec_password=$password;
 $useremail=$_POST['uemail'];
-$ret= mysqli_query($con,"SELECT id,fname FROM users WHERE email='$useremail' and password='$dec_password'");
+$ret= mysqli_query($conn,"SELECT id,fname FROM users WHERE email='$useremail' and password='$dec_password'");
 $num=mysqli_fetch_array($ret);
 if($num>0)
 {
