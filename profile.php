@@ -1,5 +1,12 @@
-<?php session_start();
-include_once('includes/config.php');
+<?php 
+
+$conn = mysqli_init();
+mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+mysqli_real_connect($conn, 'webapp1-server1.mysql.database.azure.com', 'server1', 'Chayan@1999', 'webapp1', 3306, MYSQLI_CLIENT_SSL);
+if (mysqli_connect_errno($conn)) {
+die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+
 if (strlen($_SESSION['id']==0)) {
   header('location:logout.php');
   } else{
@@ -28,7 +35,7 @@ if (strlen($_SESSION['id']==0)) {
                         
 <?php 
 $userid=$_SESSION['id'];
-$query=mysqli_query($con,"select * from users where id='$userid'");
+$query=mysqli_query($conn,"select * from users where id='$userid'");
 while($result=mysqli_fetch_array($query))
 {?>
                         <h1 class="mt-4"><?php echo $result['fname'];?>'s Profile</h1>
