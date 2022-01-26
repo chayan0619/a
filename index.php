@@ -13,7 +13,7 @@
     <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.php">Registration and Login System</a>
+            <a class="navbar-brand ps-3" href="index.php"> Student Registration and Login System</a>
             <!-- Sidebar Toggle-->
 
             <!-- Navbar Search-->
@@ -24,7 +24,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">   User Registration & Login </h1>
+                        <h1 class="mt-4"> Registration & Login </h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
               
