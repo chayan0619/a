@@ -68,7 +68,7 @@ return true;
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header">
-<h2 align="center">Registration and Login System</h2>
+<h2 align="center">Student Registration System</h2>
 <hr />
                                         <h3 class="text-center font-weight-light my-4">Create Account</h3></div>
                                     <div class="card-body">
