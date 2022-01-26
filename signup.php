@@ -1,5 +1,5 @@
 <?php 
-echo "hello";
+
 
 
 $conn = mysqli_init();
