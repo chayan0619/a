@@ -1,5 +1,14 @@
-<?php session_start();
-include_once('includes/config.php');
+<?php 
+
+$conn = mysqli_init();
+mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+mysqli_real_connect($conn, 'webapp1-server1.mysql.database.azure.com', 'server1', 'Chayan@1999', 'webapp1', 3306, MYSQLI_CLIENT_SSL);
+if (mysqli_connect_errno($conn)) {
+die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+
+
+
 if (strlen($_SESSION['id']==0)) {
   header('location:logout.php');
   } else{
@@ -9,12 +18,12 @@ if(isset($_POST['update']))
 {
 $oldpassword=$_POST['currentpassword']; 
 $newpassword=$_POST['newpassword'];
-$sql=mysqli_query($con,"SELECT password FROM users where password='$oldpassword'");
+$sql=mysqli_query($conn,"SELECT password FROM users where password='$oldpassword'");
 $num=mysqli_fetch_array($sql);
 if($num>0)
 {
 $userid=$_SESSION['id'];
-$ret=mysqli_query($con,"update users set password='$newpassword' where id='$userid'");
+$ret=mysqli_query($conn,"update users set password='$newpassword' where id='$userid'");
 echo "<script>alert('Password Changed Successfully !!');</script>";
 echo "<script type='text/javascript'> document.location = 'change-password.php'; </script>";
 }
