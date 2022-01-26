@@ -32,11 +32,11 @@ $message = "Your password is ".$password;
 $mail->isSMTP();                            // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';             // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                     // Enable SMTP authentication
-$mail->Username = 'your gmail id here';    // SMTP username
-$mail->Password = 'your gmail password here'; // SMTP password
+$mail->Username = 'chayankumawat151@gmail.com';    // SMTP username
+$mail->Password = 'Chayan@1999'; // SMTP password
 $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                          // TCP port to connect to
-$mail->setFrom('your gmail id here','your name here');
+$mail->setFrom('chayankumawat151@gmail.com','chayan');
 $mail->addAddress($toemail);   // Add a recipient
 $mail->isHTML(true);  // Set email format to HTML
 $bodyContent=$message;
