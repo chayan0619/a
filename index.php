@@ -49,13 +49,7 @@
                             </div>
 
 <div class="col-xl-4 col-md-6">
-                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Admin Panel</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="admin">Login Here</a>
-                          
-                                    </div>
-                                </div> 
+                                 
                                 
                             </div>
 
