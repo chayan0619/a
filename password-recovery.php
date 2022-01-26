@@ -1,5 +1,14 @@
 <?php
-include('includes/config.php');
+
+$conn = mysqli_init();
+mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+mysqli_real_connect($conn, 'webapp1-server1.mysql.database.azure.com', 'server1', 'Chayan@1999', 'webapp1', 3306, MYSQLI_CLIENT_SSL);
+if (mysqli_connect_errno($conn)) {
+die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+
+
+
 use PHPMailer\PHPMailer\PHPMailer; 
 use PHPMailer\PHPMailer\Exception; 
   
@@ -11,7 +20,7 @@ if(isset($_POST['send'])){
 
 $femail=$_POST['femail'];
 
-$row1=mysqli_query($con,"select email,password,fname from users where email='$femail'");
+$row1=mysqli_query($conn,"select email,password,fname from users where email='$femail'");
 $row2=mysqli_fetch_array($row1);
 if($row2>0)
 {
